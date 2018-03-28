@@ -34,9 +34,8 @@ export default {
   },
   created () {
     axios.get('/api/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg').then(resp => {
-      console.log(resp.data.data);
-      this.radioList = resp.data.data.radioList;
-      this.songList = resp.data.data.songList;
+      this.radioList = resp.data.data.radioList
+      this.songList = resp.data.data.songList
     })
   }
 }
