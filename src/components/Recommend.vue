@@ -3,13 +3,13 @@
     <div>
       <h2>电台</h2>
       <ul>
-        <li></li>
+        <li>1</li>
       </ul>
     </div>
     <div>
       <h2>热门歌单</h2>
       <ul>
-        <li></li>
+        <li>1</li>
       </ul>
     </div>
   </div>
