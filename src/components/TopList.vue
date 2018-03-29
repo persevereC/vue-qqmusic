@@ -30,7 +30,7 @@ export default {
   },
   created () {
     axios.get('/api/v8/fcg-bin/fcg_myqq_toplist.fcg?format=json').then(resp => {
-      this.topList = resp.data.data.topList;
+      this.topList = resp.data.data.topList
     })
   }
 }

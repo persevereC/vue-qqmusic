@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <banner-swiper :list='slider' :len='slider.length'></banner-swiper>
     <div>
       <h2>电台</h2>
       <ul class='radio_list'>
@@ -23,18 +24,24 @@
 
 <script>
 import axios from 'axios'
+import BannerSwiper from '@/commonCom/BannerSwiper'
 export default {
   name: 'Recommend',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App1',
       radioList: [],
-      songList: []
+      songList: [],
+      slider: []
     }
+  },
+  components: {
+    BannerSwiper
   },
   created () {
     axios.get('/api/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg').then(resp => {
       console.log(resp.data.data);
+      this.slider = resp.data.data.slider;
       this.radioList = resp.data.data.radioList;
       this.songList = resp.data.data.songList;
     })
