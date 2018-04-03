@@ -39,16 +39,10 @@ export default {
     BannerSwiper
   },
   created () {
-    axios.get('/api/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg').then(resp => {
-<<<<<<< HEAD
-      console.log(resp.data.data);
+    axios.get('/api/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg').then(resp => {      console.log(resp.data.data);
       this.slider = resp.data.data.slider;
       this.radioList = resp.data.data.radioList;
       this.songList = resp.data.data.songList;
-=======
-      this.radioList = resp.data.data.radioList
-      this.songList = resp.data.data.songList
->>>>>>> b8090a351719b1157dc11b172bbc168c6959ab7f
     })
   }
 }
